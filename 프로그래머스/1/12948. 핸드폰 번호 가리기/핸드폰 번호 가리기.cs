@@ -1,16 +1,20 @@
 public class Solution 
 {
-    public string solution(string phone_number) 
+    public string solution(string phone_number)
     {
         string answer = "";
-        string privacyNumber = phone_number.Substring(phone_number.Length - 4, 4);
         
-        for (int i = 0; i < phone_number.Length - 4; i++ )
+        for (int i = 0; i < phone_number.Length; i++)
         {
-            answer += "*";
+            if (i < phone_number.Length - 4)
+            {
+                answer += "*";
+            }
+            else
+            {
+                answer += phone_number[i];
+            }
         }
-        answer += privacyNumber;
-        
         return answer;
     }
 }
