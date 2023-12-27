@@ -8,7 +8,7 @@ public class Solution
         while (n > 0)
         {
             answer *= 3;
-            answer += n % 3;
+            answer += n % 3; // 3진법
             n /= 3;
         }
         return answer;
